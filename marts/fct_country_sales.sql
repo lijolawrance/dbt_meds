@@ -12,9 +12,9 @@ filtered_data as (
         country,
         city 
     from sales_data
-    extract(year from sold_product_created_at) = extract(year from current_date) - 1
+    where extract(year from sold_product_created_at) = extract(year from current_date) - 1
     group by 1,2
-    having count(facility_id) >=3
+    having count(distinct facility_id) >=3
     order by 1
 )
 select 
