@@ -1,8 +1,10 @@
 
-  create or replace   view public.llijo_data.fct_country_sales
   
-   as (
-    with sales_data as (
+    
+
+        create or replace transient table public.llijo_data.fct_country_sales
+         as
+        (with sales_data as (
     select * from public.raw_data.sales_data
 ),
 filtered_data as (
@@ -27,5 +29,6 @@ on filtered_data.country=sales_data.country
 and filtered_data.city=sales_data.city
 group by 1,2
 order by 1,2
-  );
-
+        );
+      
+  

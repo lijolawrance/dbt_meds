@@ -376,3 +376,375 @@ order by 1,2
 [0m11:50:33.437240 [debug] [MainThread]: Command `dbt build` succeeded at 11:50:33.437124 after 8.75 seconds
 [0m11:50:33.437581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107850430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b02c760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf46dc0>]}
 [0m11:50:33.437917 [debug] [MainThread]: Flushing usage events
+[0m12:00:31.110016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cd7bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131edfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11318f610>]}
+
+
+============================== 12:00:31.112405 | 3decaa33-cb3b-4380-addd-d20741b5bdff ==============================
+[0m12:00:31.112405 [info ] [MainThread]: Running with dbt=1.7.1
+[0m12:00:31.112778 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/lijolawrance/work/work/dbt_meds_1/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/lijolawrance/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt build -s fct_country_sales', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:00:31.290092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3decaa33-cb3b-4380-addd-d20741b5bdff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11325bc10>]}
+[0m12:00:31.337692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3decaa33-cb3b-4380-addd-d20741b5bdff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113bbdb50>]}
+[0m12:00:31.338185 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m12:00:31.348690 [debug] [MainThread]: checksum: ad428e6dc3b353dcb23d0c4ebea8b20b180e94b873271ac2a054a8e446dac0e2, vars: {}, profile: , target: , version: 1.7.1
+[0m12:00:31.354440 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m12:00:31.354724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3decaa33-cb3b-4380-addd-d20741b5bdff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113c7b490>]}
+[0m12:00:31.964677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3decaa33-cb3b-4380-addd-d20741b5bdff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141ac340>]}
+[0m12:00:31.970275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3decaa33-cb3b-4380-addd-d20741b5bdff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141ac2b0>]}
+[0m12:00:31.970557 [info ] [MainThread]: Found 1 model, 1 source, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m12:00:31.971225 [info ] [MainThread]: 
+[0m12:00:31.971669 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:00:31.972222 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_public'
+[0m12:00:31.980529 [debug] [ThreadPool]: Using snowflake connection "list_public"
+[0m12:00:31.980841 [debug] [ThreadPool]: On list_public: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "connection_name": "list_public"} */
+show terse schemas in database public
+    limit 10000
+[0m12:00:31.981053 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:00:34.205805 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 2.0 seconds
+[0m12:00:34.207765 [debug] [ThreadPool]: On list_public: Close
+[0m12:00:34.907591 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_public, now list_public_llijo_data)
+[0m12:00:34.920204 [debug] [ThreadPool]: Using snowflake connection "list_public_llijo_data"
+[0m12:00:34.920689 [debug] [ThreadPool]: On list_public_llijo_data: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "connection_name": "list_public_llijo_data"} */
+show terse objects in public.llijo_data limit 10000
+[0m12:00:34.921092 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:00:35.847739 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.0 seconds
+[0m12:00:35.848747 [debug] [ThreadPool]: On list_public_llijo_data: Close
+[0m12:00:36.633014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3decaa33-cb3b-4380-addd-d20741b5bdff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141ac2e0>]}
+[0m12:00:36.634621 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m12:00:36.635324 [info ] [MainThread]: 
+[0m12:00:36.638585 [debug] [Thread-1  ]: Began running node model.dbt_meds.fct_country_sales
+[0m12:00:36.639362 [info ] [Thread-1  ]: 1 of 1 START sql table model llijo_data.fct_country_sales ...................... [RUN]
+[0m12:00:36.640300 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_public_llijo_data, now model.dbt_meds.fct_country_sales)
+[0m12:00:36.640853 [debug] [Thread-1  ]: Began compiling node model.dbt_meds.fct_country_sales
+[0m12:00:36.651520 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_meds.fct_country_sales"
+[0m12:00:36.652687 [debug] [Thread-1  ]: Timing info for model.dbt_meds.fct_country_sales (compile): 12:00:36.641179 => 12:00:36.652412
+[0m12:00:36.653137 [debug] [Thread-1  ]: Began executing node model.dbt_meds.fct_country_sales
+[0m12:00:36.679669 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_meds.fct_country_sales"
+[0m12:00:36.681357 [debug] [Thread-1  ]: Using snowflake connection "model.dbt_meds.fct_country_sales"
+[0m12:00:36.681705 [debug] [Thread-1  ]: On model.dbt_meds.fct_country_sales: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "node_id": "model.dbt_meds.fct_country_sales"} */
+create or replace transient table public.llijo_data.fct_country_sales
+         as
+        (with sales_data as (
+    select * from public.raw_data.sales_data
+),
+filtered_data as (
+    select 
+        country,
+        city 
+    from sales_data
+    group by 1,2
+    having count(facility_id) >=3
+    order by 1
+)
+select 
+    sales_data.country,
+    sales_data.api_sold_product as product_name,
+    sum(quantity_sold) as total_sold,
+    avg(unit_price) as average_price,
+    min(sold_product_created_at) as first_sale,
+    max(sold_product_created_at) as last_sale
+from sales_data 
+inner join filtered_data
+on filtered_data.country=sales_data.country
+and filtered_data.city=sales_data.city
+group by 1,2
+order by 1,2
+        );
+[0m12:00:36.682000 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:00:39.366406 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m12:00:39.390507 [debug] [Thread-1  ]: Timing info for model.dbt_meds.fct_country_sales (execute): 12:00:36.653394 => 12:00:39.390275
+[0m12:00:39.390945 [debug] [Thread-1  ]: On model.dbt_meds.fct_country_sales: Close
+[0m12:00:40.086514 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3decaa33-cb3b-4380-addd-d20741b5bdff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114de0bb0>]}
+[0m12:00:40.088411 [info ] [Thread-1  ]: 1 of 1 OK created sql table model llijo_data.fct_country_sales ................. [[32mSUCCESS 1[0m in 3.45s]
+[0m12:00:40.089546 [debug] [Thread-1  ]: Finished running node model.dbt_meds.fct_country_sales
+[0m12:00:40.092068 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:00:40.092642 [debug] [MainThread]: Connection 'model.dbt_meds.fct_country_sales' was properly closed.
+[0m12:00:40.093170 [info ] [MainThread]: 
+[0m12:00:40.093688 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 8.12 seconds (8.12s).
+[0m12:00:40.094629 [debug] [MainThread]: Command end result
+[0m12:00:40.105222 [info ] [MainThread]: 
+[0m12:00:40.105801 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:00:40.106172 [info ] [MainThread]: 
+[0m12:00:40.106559 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:00:40.108102 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 9.035294, "process_user_time": 2.224184, "process_kernel_time": 0.143645, "process_mem_max_rss": "133136384", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:00:40.108680 [debug] [MainThread]: Command `dbt build` succeeded at 12:00:40.108539 after 9.04 seconds
+[0m12:00:40.109095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cd7bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11325bc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114968ac0>]}
+[0m12:00:40.109492 [debug] [MainThread]: Flushing usage events
+[0m12:01:18.372123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105159a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11056a6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11050b5b0>]}
+
+
+============================== 12:01:18.374461 | 07d9169c-d050-4028-bef3-0d655ae488d9 ==============================
+[0m12:01:18.374461 [info ] [MainThread]: Running with dbt=1.7.1
+[0m12:01:18.374817 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/lijolawrance/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/lijolawrance/work/work/dbt_meds_1/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt build -s fct_country_sales', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:01:18.557128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '07d9169c-d050-4028-bef3-0d655ae488d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1105342b0>]}
+[0m12:01:18.607961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '07d9169c-d050-4028-bef3-0d655ae488d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111004160>]}
+[0m12:01:18.608614 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m12:01:18.619859 [debug] [MainThread]: checksum: ad428e6dc3b353dcb23d0c4ebea8b20b180e94b873271ac2a054a8e446dac0e2, vars: {}, profile: , target: , version: 1.7.1
+[0m12:01:18.640567 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:01:18.640914 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:01:18.644786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '07d9169c-d050-4028-bef3-0d655ae488d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111381b50>]}
+[0m12:01:18.651430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '07d9169c-d050-4028-bef3-0d655ae488d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111366f40>]}
+[0m12:01:18.651798 [info ] [MainThread]: Found 1 model, 1 source, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m12:01:18.652641 [info ] [MainThread]: 
+[0m12:01:18.653131 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:01:18.653793 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_public'
+[0m12:01:18.662443 [debug] [ThreadPool]: Using snowflake connection "list_public"
+[0m12:01:18.662727 [debug] [ThreadPool]: On list_public: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "connection_name": "list_public"} */
+show terse schemas in database public
+    limit 10000
+[0m12:01:18.662938 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:01:20.719740 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 2.0 seconds
+[0m12:01:20.722266 [debug] [ThreadPool]: On list_public: Close
+[0m12:01:21.432772 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_public, now list_public_llijo_data)
+[0m12:01:21.445113 [debug] [ThreadPool]: Using snowflake connection "list_public_llijo_data"
+[0m12:01:21.445606 [debug] [ThreadPool]: On list_public_llijo_data: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "connection_name": "list_public_llijo_data"} */
+show terse objects in public.llijo_data limit 10000
+[0m12:01:21.446015 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:01:22.491317 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:01:22.497880 [debug] [ThreadPool]: On list_public_llijo_data: Close
+[0m12:01:23.207728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '07d9169c-d050-4028-bef3-0d655ae488d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1111527c0>]}
+[0m12:01:23.209224 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m12:01:23.209773 [info ] [MainThread]: 
+[0m12:01:23.212972 [debug] [Thread-1  ]: Began running node model.dbt_meds.fct_country_sales
+[0m12:01:23.213779 [info ] [Thread-1  ]: 1 of 1 START sql table model llijo_data.fct_country_sales ...................... [RUN]
+[0m12:01:23.214751 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_public_llijo_data, now model.dbt_meds.fct_country_sales)
+[0m12:01:23.215285 [debug] [Thread-1  ]: Began compiling node model.dbt_meds.fct_country_sales
+[0m12:01:23.226351 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_meds.fct_country_sales"
+[0m12:01:23.227353 [debug] [Thread-1  ]: Timing info for model.dbt_meds.fct_country_sales (compile): 12:01:23.215583 => 12:01:23.227096
+[0m12:01:23.227770 [debug] [Thread-1  ]: Began executing node model.dbt_meds.fct_country_sales
+[0m12:01:23.281710 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_meds.fct_country_sales"
+[0m12:01:23.282977 [debug] [Thread-1  ]: Using snowflake connection "model.dbt_meds.fct_country_sales"
+[0m12:01:23.283262 [debug] [Thread-1  ]: On model.dbt_meds.fct_country_sales: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "node_id": "model.dbt_meds.fct_country_sales"} */
+create or replace transient table public.llijo_data.fct_country_sales
+         as
+        (with sales_data as (
+    select * from public.raw_data.sales_data
+),
+filtered_data as (
+    select 
+        country,
+        city 
+    from sales_data
+    group by 1,2
+    having count(facility_id) >=3
+    order by 1
+)
+select 
+    sales_data.country,
+    sales_data.api_sold_product as product_name,
+    sum(quantity_sold) as total_sold,
+    avg(unit_price) as average_price,
+    min(sold_product_created_at) as first_sale,
+    max(sold_product_created_at) as last_sale
+from sales_data 
+inner join filtered_data
+on filtered_data.country=sales_data.country
+and filtered_data.city=sales_data.city
+group by 1,2
+order by 1,2
+        );
+[0m12:01:23.283517 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:01:25.121019 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m12:01:25.147832 [debug] [Thread-1  ]: Timing info for model.dbt_meds.fct_country_sales (execute): 12:01:23.228028 => 12:01:25.147603
+[0m12:01:25.148276 [debug] [Thread-1  ]: On model.dbt_meds.fct_country_sales: Close
+[0m12:01:25.787824 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '07d9169c-d050-4028-bef3-0d655ae488d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111c6bfa0>]}
+[0m12:01:25.789378 [info ] [Thread-1  ]: 1 of 1 OK created sql table model llijo_data.fct_country_sales ................. [[32mSUCCESS 1[0m in 2.57s]
+[0m12:01:25.790509 [debug] [Thread-1  ]: Finished running node model.dbt_meds.fct_country_sales
+[0m12:01:25.793552 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:01:25.794174 [debug] [MainThread]: Connection 'model.dbt_meds.fct_country_sales' was properly closed.
+[0m12:01:25.794762 [info ] [MainThread]: 
+[0m12:01:25.795357 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 7.14 seconds (7.14s).
+[0m12:01:25.796444 [debug] [MainThread]: Command end result
+[0m12:01:25.808166 [info ] [MainThread]: 
+[0m12:01:25.808819 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:01:25.809254 [info ] [MainThread]: 
+[0m12:01:25.809699 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:01:25.811746 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 7.476358, "process_user_time": 1.704663, "process_kernel_time": 0.136467, "process_mem_max_rss": "125632512", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:01:25.812768 [debug] [MainThread]: Command `dbt build` succeeded at 12:01:25.812504 after 7.48 seconds
+[0m12:01:25.813335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105159a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1111acb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111048160>]}
+[0m12:01:25.813900 [debug] [MainThread]: Flushing usage events
+[0m12:04:30.402946 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054043d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107dffcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e43430>]}
+
+
+============================== 12:04:30.405679 | 4da0ee66-43cc-4081-8a76-5b85df2b2c67 ==============================
+[0m12:04:30.405679 [info ] [MainThread]: Running with dbt=1.7.1
+[0m12:04:30.406041 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/lijolawrance/work/work/dbt_meds_1/logs', 'debug': 'False', 'profiles_dir': '/Users/lijolawrance/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt build -s fct_country_sales', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:04:30.596137 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4da0ee66-43cc-4081-8a76-5b85df2b2c67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e6c940>]}
+[0m12:04:30.646656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4da0ee66-43cc-4081-8a76-5b85df2b2c67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110b00eb0>]}
+[0m12:04:30.647217 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m12:04:30.657435 [debug] [MainThread]: checksum: ad428e6dc3b353dcb23d0c4ebea8b20b180e94b873271ac2a054a8e446dac0e2, vars: {}, profile: , target: , version: 1.7.1
+[0m12:04:30.678764 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:04:30.679123 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:04:30.682990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4da0ee66-43cc-4081-8a76-5b85df2b2c67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e99af0>]}
+[0m12:04:30.689405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4da0ee66-43cc-4081-8a76-5b85df2b2c67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110dddeb0>]}
+[0m12:04:30.689744 [info ] [MainThread]: Found 1 model, 1 source, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m12:04:30.690598 [info ] [MainThread]: 
+[0m12:04:30.691108 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:04:30.691821 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_public'
+[0m12:04:30.700505 [debug] [ThreadPool]: Using snowflake connection "list_public"
+[0m12:04:30.700796 [debug] [ThreadPool]: On list_public: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "connection_name": "list_public"} */
+show terse schemas in database public
+    limit 10000
+[0m12:04:30.701005 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:04:31.859450 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 1.0 seconds
+[0m12:04:31.863310 [debug] [ThreadPool]: On list_public: Close
+[0m12:04:32.591803 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_public, now list_public_llijo_data)
+[0m12:04:32.605021 [debug] [ThreadPool]: Using snowflake connection "list_public_llijo_data"
+[0m12:04:32.605530 [debug] [ThreadPool]: On list_public_llijo_data: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "connection_name": "list_public_llijo_data"} */
+show terse objects in public.llijo_data limit 10000
+[0m12:04:32.605895 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:04:33.697641 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:04:33.702740 [debug] [ThreadPool]: On list_public_llijo_data: Close
+[0m12:04:34.423829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4da0ee66-43cc-4081-8a76-5b85df2b2c67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110c7cd60>]}
+[0m12:04:34.425715 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m12:04:34.426471 [info ] [MainThread]: 
+[0m12:04:34.432512 [debug] [Thread-1  ]: Began running node model.dbt_meds.fct_country_sales
+[0m12:04:34.434045 [info ] [Thread-1  ]: 1 of 1 START sql table model llijo_data.fct_country_sales ...................... [RUN]
+[0m12:04:34.435607 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_public_llijo_data, now model.dbt_meds.fct_country_sales)
+[0m12:04:34.436414 [debug] [Thread-1  ]: Began compiling node model.dbt_meds.fct_country_sales
+[0m12:04:34.453343 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_meds.fct_country_sales"
+[0m12:04:34.454817 [debug] [Thread-1  ]: Timing info for model.dbt_meds.fct_country_sales (compile): 12:04:34.436910 => 12:04:34.454434
+[0m12:04:34.455437 [debug] [Thread-1  ]: Began executing node model.dbt_meds.fct_country_sales
+[0m12:04:34.520587 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_meds.fct_country_sales"
+[0m12:04:34.521809 [debug] [Thread-1  ]: Using snowflake connection "model.dbt_meds.fct_country_sales"
+[0m12:04:34.522070 [debug] [Thread-1  ]: On model.dbt_meds.fct_country_sales: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "node_id": "model.dbt_meds.fct_country_sales"} */
+create or replace transient table public.llijo_data.fct_country_sales
+         as
+        (with sales_data as (
+    select * from public.raw_data.sales_data
+),
+filtered_data as (
+    select 
+        country,
+        city 
+    from sales_data
+    group by 1,2
+    having count(facility_id) >=3
+    order by 1
+)
+select 
+    sales_data.country,
+    sales_data.api_sold_product as product_name,
+    sum(quantity_sold) as total_sold,
+    avg(unit_price) as average_price,
+    min(sold_product_created_at) as first_sale,
+    max(sold_product_created_at) as last_sale
+from sales_data 
+inner join filtered_data
+on filtered_data.country=sales_data.country
+and filtered_data.city=sales_data.city
+group by 1,2
+order by 1,2
+        );
+[0m12:04:34.522309 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:04:36.346644 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m12:04:36.393061 [debug] [Thread-1  ]: Timing info for model.dbt_meds.fct_country_sales (execute): 12:04:34.455742 => 12:04:36.392742
+[0m12:04:36.393629 [debug] [Thread-1  ]: On model.dbt_meds.fct_country_sales: Close
+[0m12:04:37.184518 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4da0ee66-43cc-4081-8a76-5b85df2b2c67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110ea8190>]}
+[0m12:04:37.188695 [info ] [Thread-1  ]: 1 of 1 OK created sql table model llijo_data.fct_country_sales ................. [[32mSUCCESS 1[0m in 2.75s]
+[0m12:04:37.190114 [debug] [Thread-1  ]: Finished running node model.dbt_meds.fct_country_sales
+[0m12:04:37.194588 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:04:37.195639 [debug] [MainThread]: Connection 'model.dbt_meds.fct_country_sales' was properly closed.
+[0m12:04:37.199345 [info ] [MainThread]: 
+[0m12:04:37.200258 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 6.51 seconds (6.51s).
+[0m12:04:37.201636 [debug] [MainThread]: Command end result
+[0m12:04:37.215686 [info ] [MainThread]: 
+[0m12:04:37.216542 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:04:37.217064 [info ] [MainThread]: 
+[0m12:04:37.217754 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:04:37.219965 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 6.8543377, "process_user_time": 1.724365, "process_kernel_time": 0.150091, "process_mem_max_rss": "125616128", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:04:37.220686 [debug] [MainThread]: Command `dbt build` succeeded at 12:04:37.220519 after 6.86 seconds
+[0m12:04:37.221253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054043d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107df8040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110b00eb0>]}
+[0m12:04:37.221757 [debug] [MainThread]: Flushing usage events
+[0m12:05:08.642341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105229790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107566820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10757e430>]}
+
+
+============================== 12:05:08.645561 | 86e8632d-ff0c-4cd1-95c0-097565eb901e ==============================
+[0m12:05:08.645561 [info ] [MainThread]: Running with dbt=1.7.1
+[0m12:05:08.645974 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/lijolawrance/work/work/dbt_meds_1/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/lijolawrance/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt build -s fct_country_sales', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:05:08.847314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '86e8632d-ff0c-4cd1-95c0-097565eb901e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075d6c70>]}
+[0m12:05:08.900341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '86e8632d-ff0c-4cd1-95c0-097565eb901e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111208c40>]}
+[0m12:05:08.900989 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m12:05:08.912368 [debug] [MainThread]: checksum: ad428e6dc3b353dcb23d0c4ebea8b20b180e94b873271ac2a054a8e446dac0e2, vars: {}, profile: , target: , version: 1.7.1
+[0m12:05:08.934118 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:05:08.934469 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:05:08.938403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '86e8632d-ff0c-4cd1-95c0-097565eb901e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111581be0>]}
+[0m12:05:08.945151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '86e8632d-ff0c-4cd1-95c0-097565eb901e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111566670>]}
+[0m12:05:08.945516 [info ] [MainThread]: Found 1 model, 1 source, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m12:05:08.946360 [info ] [MainThread]: 
+[0m12:05:08.946834 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:05:08.947481 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_public'
+[0m12:05:08.956749 [debug] [ThreadPool]: Using snowflake connection "list_public"
+[0m12:05:08.957082 [debug] [ThreadPool]: On list_public: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "connection_name": "list_public"} */
+show terse schemas in database public
+    limit 10000
+[0m12:05:08.957286 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:05:10.266114 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 1.0 seconds
+[0m12:05:10.269102 [debug] [ThreadPool]: On list_public: Close
+[0m12:05:10.970195 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_public, now list_public_llijo_data)
+[0m12:05:10.976019 [debug] [ThreadPool]: Using snowflake connection "list_public_llijo_data"
+[0m12:05:10.976385 [debug] [ThreadPool]: On list_public_llijo_data: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "connection_name": "list_public_llijo_data"} */
+show terse objects in public.llijo_data limit 10000
+[0m12:05:10.976604 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:05:11.997894 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:05:12.000917 [debug] [ThreadPool]: On list_public_llijo_data: Close
+[0m12:05:12.657797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86e8632d-ff0c-4cd1-95c0-097565eb901e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1111f2130>]}
+[0m12:05:12.659223 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m12:05:12.659876 [info ] [MainThread]: 
+[0m12:05:12.663463 [debug] [Thread-1  ]: Began running node model.dbt_meds.fct_country_sales
+[0m12:05:12.664470 [info ] [Thread-1  ]: 1 of 1 START sql table model llijo_data.fct_country_sales ...................... [RUN]
+[0m12:05:12.665532 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_public_llijo_data, now model.dbt_meds.fct_country_sales)
+[0m12:05:12.666049 [debug] [Thread-1  ]: Began compiling node model.dbt_meds.fct_country_sales
+[0m12:05:12.677677 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_meds.fct_country_sales"
+[0m12:05:12.678986 [debug] [Thread-1  ]: Timing info for model.dbt_meds.fct_country_sales (compile): 12:05:12.666342 => 12:05:12.678622
+[0m12:05:12.679439 [debug] [Thread-1  ]: Began executing node model.dbt_meds.fct_country_sales
+[0m12:05:12.736302 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_meds.fct_country_sales"
+[0m12:05:12.737501 [debug] [Thread-1  ]: Using snowflake connection "model.dbt_meds.fct_country_sales"
+[0m12:05:12.737771 [debug] [Thread-1  ]: On model.dbt_meds.fct_country_sales: /* {"app": "dbt", "dbt_version": "1.7.1", "profile_name": "dbt_meds", "target_name": "dev", "node_id": "model.dbt_meds.fct_country_sales"} */
+create or replace transient table public.llijo_data.fct_country_sales
+         as
+        (with sales_data as (
+    select * from public.raw_data.sales_data
+),
+filtered_data as (
+    select 
+        country,
+        city 
+    from sales_data
+    group by 1,2
+    having count(facility_id) >=3
+    order by 1
+)
+select 
+    sales_data.country,
+    sales_data.api_sold_product as product_name,
+    sum(quantity_sold) as total_sold,
+    avg(unit_price) as average_price,
+    min(sold_product_created_at) as first_sale,
+    max(sold_product_created_at) as last_sale
+from sales_data 
+inner join filtered_data
+on filtered_data.country=sales_data.country
+and filtered_data.city=sales_data.city
+group by 1,2
+order by 1,2
+        );
+[0m12:05:12.738018 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:05:15.008144 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m12:05:15.022274 [debug] [Thread-1  ]: Timing info for model.dbt_meds.fct_country_sales (execute): 12:05:12.679675 => 12:05:15.022112
+[0m12:05:15.022633 [debug] [Thread-1  ]: On model.dbt_meds.fct_country_sales: Close
+[0m12:05:15.690406 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86e8632d-ff0c-4cd1-95c0-097565eb901e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107534790>]}
+[0m12:05:15.691852 [info ] [Thread-1  ]: 1 of 1 OK created sql table model llijo_data.fct_country_sales ................. [[32mSUCCESS 1[0m in 3.03s]
+[0m12:05:15.692780 [debug] [Thread-1  ]: Finished running node model.dbt_meds.fct_country_sales
+[0m12:05:15.695244 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:05:15.695758 [debug] [MainThread]: Connection 'model.dbt_meds.fct_country_sales' was properly closed.
+[0m12:05:15.696248 [info ] [MainThread]: 
+[0m12:05:15.696743 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 6.75 seconds (6.75s).
+[0m12:05:15.697645 [debug] [MainThread]: Command end result
+[0m12:05:15.707043 [info ] [MainThread]: 
+[0m12:05:15.707537 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:05:15.707932 [info ] [MainThread]: 
+[0m12:05:15.708313 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:05:15.710364 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 7.1089053, "process_user_time": 1.640965, "process_kernel_time": 0.133595, "process_mem_max_rss": "125534208", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:05:15.711078 [debug] [MainThread]: Command `dbt build` succeeded at 12:05:15.710929 after 7.11 seconds
+[0m12:05:15.711533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105229790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1115666d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111208c40>]}
+[0m12:05:15.711970 [debug] [MainThread]: Flushing usage events
