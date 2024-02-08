@@ -4,7 +4,9 @@
 
         create or replace transient table public.llijo_data.fct_country_sales
          as
-        (with sales_data as (
+        (
+
+with sales_data as (
     select * from public.raw_data.sales_data
 ),
 filtered_data as (
@@ -16,7 +18,7 @@ filtered_data as (
     group by 1,2
     having count(*) >3
     order by 1
-)
+),
 final as (
     select 
         sales_data.country,
